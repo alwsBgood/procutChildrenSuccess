@@ -1,22 +1,13 @@
+@import url(../libs/niftymodal/component.css);
 body {
   position: relative;
+  height: 100%;
   font: 18px/24px "Raleway-Regular", sans-serif;
   color: #7b7b7b;
   background-color: #f5f6f8; }
 
-body.unscroll {
-  overflow: hidden; }
-
 h2 {
-  font: 48px/50px "Raleway-Bold", sans-serif;
-  color: #000; }
-
-.title {
-  font: 26px/30px "Raleway-Bold", sans-serif;
-  color: #000; }
-
-.title_small {
-  font: 18px/24px "Raleway-Bold", sans-serif;
+  font: 28px/50px "Raleway-Bold", sans-serif;
   color: #000; }
 
 a,
@@ -69,43 +60,9 @@ button:hover {
 ::-webkit-scrollbar-thumb:window-inactive {
   background: #dc3fa8; }
 
-/* BUTTON scrollUP SYLES*/
-#scrollup {
-  position: fixed;
-  right: 20px;
-  bottom: 30px;
-  width: 30px;
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  display: none;
-  opacity: 1;
-  cursor: pointer;
-  z-index: 10;
-  font-size: 40px;
-  text-shadow: -2px 2px 5px rgba(0, 0, 0, 0.3);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s; }
-  #scrollup svg {
-    fill: #848484;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s; }
-
-#scrollup:hover svg {
-  fill: #dc3fa8; }
-
 .hidden {
   height: 0;
   width: 0; }
-
-.bar-long {
-  height: 5px;
-  width: 0;
-  z-index: 1000;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: #dc3fa8; }
 
 .btn {
   width: 326px;
@@ -127,325 +84,392 @@ button:hover {
 .btn:active {
   background-color: #edcc00; }
 
-#sec_01 {
+section {
+  padding: 200px 0 85px;
   position: relative;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#0a5979), color-stop(56%, #a84285), to(#f5f6f8));
-  background-image: -webkit-linear-gradient(top, #0a5979 0%, #a84285 56%, #f5f6f8 100%);
-  background-image: linear-gradient(180deg, #0a5979 0%, #a84285 56%, #f5f6f8 100%);
-  background-color: #744279;
-  overflow: hidden; }
-  #sec_01 .top .logo {
-    float: left; }
-  #sec_01 .top nav {
-    float: left;
-    margin: 35px 0 0 125px; }
-    #sec_01 .top nav a {
-      display: inline-block;
-      color: #7c97a9;
-      font-family: "Raleway-Medium", sans-serif;
-      font-size: 16px;
-      line-height: 24px; }
-    #sec_01 .top nav a + a {
-      margin-left: 12px; }
-    #sec_01 .top nav a:hover {
-      color: #fff; }
-  #sec_01 .top .call {
-    float: right;
-    width: 190px;
-    height: 40px;
-    -webkit-border-radius: 19px;
-    border-radius: 19px;
-    background-color: #ffffff;
-    margin-top: 30px;
-    color: #165679;
-    font-family: "Raleway-Bold", sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 0.05em; }
-  #sec_01 .top .call:hover {
-    background-color: #dc3fa8;
-    color: #fff; }
-  #sec_01 .top .call:active {
-    background-color: #06425c; }
-  #sec_01 .container {
-    background: url(img/sec_01-bg_letter.png) top 140px left 405px no-repeat; }
-  #sec_01 .content_left {
-    float: left;
-    margin-top: 135px;
-    position: relative;
-    z-index: 10; }
-  #sec_01 .wrap_text {
-    position: relative;
-    width: 355px; }
-    #sec_01 .wrap_text .small_text {
-      position: absolute;
-      bottom: -6px;
-      right: -200px;
-      color: #fff; }
-  #sec_01 .beforeheader {
-    color: #f7ff00;
-    font-family: "Raleway-Bold", sans-serif;
-    font-size: 70px;
-    line-height: 80px; }
-    #sec_01 .beforeheader span {
-      position: relative;
-      display: inline-block; }
-    #sec_01 .beforeheader span:before {
-      position: absolute;
-      content: '';
-      left: 0px;
-      bottom: 0px;
-      width: 0;
-      height: 5px;
-      background: #f7ff00;
-      -webkit-animation: scale_bar 2.5s;
-      animation: scale_bar 2.5s;
-      -webkit-animation-fill-mode: forwards;
-      animation-fill-mode: forwards;
-      -webkit-animation-delay: 3s;
-      animation-delay: 3s; }
-  #sec_01 h1 {
-    color: #ffffff;
-    font-family: "Raleway-Bold", sans-serif;
-    font-size: 100px;
-    line-height: 78px;
-    margin-top: 20px;
-    margin-bottom: 50px; }
-  #sec_01 .btn {
-    float: left;
-    position: relative;
-    z-index: 20; }
-  #sec_01 .price {
+  text-align: center;
+  background: url(../img/bg.png) top center no-repeat;
+  min-height: 100vh; }
+  section h1 {
+    color: #000000;
+    font: 48px/66px "Raleway-Bold", sans-serif; }
+  section p {
+    color: #dc3fa8;
+    font: 26px/30px "Raleway-Bold", sans-serif; }
+  section .btn {
+    margin: 30px auto 0; }
+  section footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+
+footer {
+  padding: 15px 0 15px;
+  background-color: #202020; }
+  footer .politics {
+    margin-top: 17px; }
+    footer .politics a {
+      color: #65666a;
+      font-size: 14px; }
+    footer .politics a:hover {
+      color: #dc3fa8; }
+    footer .politics a + a {
+      margin-left: 10px; }
+  footer .logo_rezart {
+    margin-top: 5px;
+    margin-left: 25px;
+    width: 80px;
+    float: right; }
+  footer .logo_wcf {
+    float: right; }
+  footer .footer-fire:hover {
+    -webkit-animation-name: fire;
+    animation-name: fire;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: step-end;
+    animation-timing-function: step-end;
+    -webkit-animation-direction: normal;
+    animation-direction: normal;
+    opacity: 1; }
+
+@-webkit-keyframes fire {
+  0% {
+    background-position: 0 center; }
+  25% {
+    background-position: -46px center; }
+  50% {
+    background-position: -84px center; }
+  75% {
+    background-position: -128px center; }
+  100% {
+    background-position: -160px center; } }
+
+@keyframes fire {
+  0% {
+    background-position: 0 center; }
+  25% {
+    background-position: -46px center; }
+  50% {
+    background-position: -84px center; }
+  75% {
+    background-position: -128px center; }
+  100% {
+    background-position: -160px center; } }
+  footer .footer-fire {
     display: inline-block;
-    margin: -20px 0 0 30px;
-    color: #ffffff;
-    font-family: "Accuratist", sans-serif;
-    font-size: 48px;
-    line-height: 80px; }
-    #sec_01 .price span {
-      font-family: "Raleway-Bold", sans-serif;
-      font-size: 24px;
-      line-height: 80px; }
-  #sec_01 .picture {
+    height: 45px;
+    width: 35px;
+    overflow: hidden;
+    background-image: url(../img/fire.svg);
+    background-repeat: no-repeat;
     position: relative;
-    z-index: 11;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-    -webkit-align-items: flex-end;
-    -ms-flex-align: end;
-    align-items: flex-end;
+    background-position: 0 center;
+    padding: 0;
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+    background-size: 200px;
     float: right;
-    padding-right: 115px;
-    margin-top: 20px; }
-    #sec_01 .picture img {
-      -webkit-animation: image_paint 2s;
-      animation: image_paint 2s;
-      -webkit-animation-fill-mode: forwards;
-      animation-fill-mode: forwards; }
-  #sec_01 .picture:before {
-    position: absolute;
-    z-index: 10;
-    content: '';
-    width: 652px;
-    height: 403px;
-    right: 0px;
-    top: 130px;
-    background: url(img/focus.png) center no-repeat;
-    -webkit-animation: blinc_cam 2s;
-    animation: blinc_cam 2s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards; }
-  #sec_01 .wave_1 {
-    position: absolute;
-    z-index: 0;
-    background: url(img/sec_01-wave-1.png) center repeat-x;
-    height: 226px;
-    bottom: 175px;
-    -webkit-animation: wave 240s linear infinite;
-    animation: wave 240s linear infinite;
-    width: 100%; }
-  #sec_01 .wave_2 {
-    position: absolute;
-    z-index: 12;
-    background: url(img/wave-2.png) center repeat-x;
-    height: 168px;
-    bottom: -1px;
-    -webkit-animation: wave_2 200s linear infinite;
-    animation: wave_2 200s linear infinite;
-    width: 100%; }
-  #sec_01 .wave_3 {
-    position: absolute;
-    z-index: 0;
-    background: url(img/sec_01-wave-3.png) center repeat-x;
-    height: 226px;
-    bottom: 70px;
-    -webkit-animation: wave 150s linear infinite;
-    animation: wave 150s linear infinite;
-    width: 100%; }
+    opacity: .5; }
 
-@-webkit-keyframes wave {
-  0% {
-    width: 400%; }
-  50% {
-    width: 100%; }
-  100% {
-    width: 400%; } }
+/* ================================*/
+/* CURSOR STYLES*/
+.touch_mode_grab {
+  cursor: grab !important;
+  cursor: -webkit-grab !important; }
 
-@keyframes wave {
-  0% {
-    width: 400%; }
-  50% {
-    width: 100%; }
-  100% {
-    width: 400%; } }
+.touch_mode_grabbing {
+  cursor: grabbing !important;
+  cursor: -webkit-grabbing !important; }
 
-@-webkit-keyframes wave_2 {
-  0% {
-    width: 100%; }
-  50% {
-    width: 450%; }
-  100% {
-    width: 100%; } }
+/* ==========================*/
+/* ==========================*/
+.tabs__content {
+  display: none !important; }
 
-@keyframes wave_2 {
-  0% {
-    width: 100%; }
-  50% {
-    width: 450%; }
-  100% {
-    width: 100%; } }
+.tabs__content.active {
+  display: block !important; }
 
-@-webkit-keyframes scale_bar {
-  0% {
-    width: 0; }
-  100% {
-    width: 101%; } }
+/* ==========================*/
+div[id*="modal_politics"] {
+  text-align: center; }
+  div[id*="modal_politics"] h2 {
+    padding-top: 20px; }
 
-@keyframes scale_bar {
-  0% {
-    width: 0; }
-  100% {
-    width: 101%; } }
+.md_large {
+  max-width: 100%;
+  width: 90%; }
 
-@-webkit-keyframes image_paint {
-  0% {
-    -webkit-filter: blur(10px);
-    filter: blur(10px); }
-  10% {
-    -webkit-filter: blur(8px);
-    filter: blur(8px); }
-  30% {
-    -webkit-filter: blur(4px);
-    filter: blur(4px); }
-  50% {
-    -webkit-filter: blur(10px);
-    filter: blur(10px); }
-  90% {
-    -webkit-filter: blur(3px);
-    filter: blur(3px); }
-  100% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px); } }
+.md_large .md-content > div.md_content {
+  padding: 0px 40px 0px; }
 
-@keyframes image_paint {
-  0% {
-    -webkit-filter: blur(10px);
-    filter: blur(10px); }
-  10% {
-    -webkit-filter: blur(8px);
-    filter: blur(8px); }
-  30% {
-    -webkit-filter: blur(4px);
-    filter: blur(4px); }
-  50% {
-    -webkit-filter: blur(10px);
-    filter: blur(10px); }
-  90% {
-    -webkit-filter: blur(3px);
-    filter: blur(3px); }
-  100% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px); } }
+.md_large .md-content p {
+  font-size: 0.9em;
+  line-height: 1.4; }
 
-@-webkit-keyframes blinc_cam {
-  0% {
-    background: url(img/focus.png) center no-repeat; }
-  20% {
-    background: none; }
-  35% {
-    background: url(img/focus.png) center no-repeat; }
-  45% {
-    background: none; }
-  54% {
-    background: url(img/focus.png) center no-repeat; }
-  63% {
-    background: none; }
-  71% {
-    background: url(img/focus.png) center no-repeat; }
-  83% {
-    background: none; }
-  90% {
-    background: url(img/focus.png) center no-repeat; }
-  96% {
-    background: none; }
-  100% {
-    background: url(img/focus.png) center no-repeat; } }
+.md_large .md-content p:first-child {
+  padding-top: 24px; }
 
-@keyframes blinc_cam {
-  0% {
-    background: url(img/focus.png) center no-repeat; }
-  20% {
-    background: none; }
-  35% {
-    background: url(img/focus.png) center no-repeat; }
-  45% {
-    background: none; }
-  54% {
-    background: url(img/focus.png) center no-repeat; }
-  63% {
-    background: none; }
-  71% {
-    background: url(img/focus.png) center no-repeat; }
-  83% {
-    background: none; }
-  90% {
-    background: url(img/focus.png) center no-repeat; }
-  96% {
-    background: none; }
-  100% {
-    background: url(img/focus.png) center no-repeat; } }
+.md_large .md-content p:last-child {
+  padding-bottom: 24px; }
 
-@-webkit-keyframes cta {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1); }
-  50% {
-    -webkit-transform: scale(1.02);
-    transform: scale(1.02); }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1); } }
+.md_large .md_content {
+  max-height: 320px;
+  overflow: auto;
+  padding-top: 24px; }
 
-@keyframes cta {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1); }
-  50% {
-    -webkit-transform: scale(1.02);
-    transform: scale(1.02); }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1); } }
-
-.paralax_letter, ._letter {
+.md_content:before {
+  content: "";
   position: absolute;
-  z-index: -1;
-  color: #f7ff00;
-  font-family: "Raleway-Bold", sans-serif;
-  font-size: 933px;
-  line-height: 1040px;
-  text-transform: uppercase; }
+  width: 100%;
+  left: 0;
+  height: 24px;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(top, white, rgba(255, 255, 255, 0));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
+  background-repeat: repeat-x; }
+
+.md_content:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 24px;
+  bottom: 0;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255, 255, 255, 0)), to(white));
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), white);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(white));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), white);
+  background-repeat: repeat-x; }
+
+.md-content h2 {
+  text-align: center; }
+
+.md_bottom {
+  padding: 12px 0 0 0; }
+
+.md-content .form_input {
+  width: 45%; }
+
+.form_icon {
+  position: absolute;
+  width: 40px;
+  color: #cfcfcf; }
+
+.form_icon i {
+  font-size: 18px;
+  line-height: 54px; }
+
+.allert, .allert_tell {
+  position: absolute;
+  z-index: 20;
+  top: 50%;
+  margin-top: -10px;
+  display: block;
+  right: 15px;
+  height: 20px;
+  width: 20px;
+  color: #FF6565;
+  cursor: default; }
+
+.allert:hover, .allert_tell:hover {
+  text-decoration: none; }
+
+.allert span, .allert_tell span {
+  display: none;
+  opacity: 0;
+  padding: 5px;
+  margin-left: 5px;
+  line-height: 14px;
+  color: #000;
+  font-style: italic;
+  font-size: 13px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  min-width: 140px;
+  text-align: center; }
+
+.allert:hover span, .allert_tell:hover span {
+  border: 1px solid #FF6565;
+  background: #fff;
+  display: inline;
+  position: absolute;
+  color: #4e4e4e;
+  right: 24px;
+  top: -4px;
+  opacity: 1; }
+
+.btn_close_modal {
+  position: absolute;
+  right: 15px;
+  z-index: 10;
+  top: 15px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  margin: 0 auto 20px;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%; }
+  .btn_close_modal svg {
+    width: 40px; }
+  .btn_close_modal a:hover {
+    color: #000; }
+    .btn_close_modal a:hover svg .a {
+      fill: #DD1A1E; }
+
+.t_small {
+  font-size: 14px; }
+
+input::-webkit-input-placeholder {
+  color: black;
+  color: #7b7b7b;
+  font: 18px "Raleway-Regular", sans-serif; }
+
+input:-moz-placeholder {
+  color: black;
+  color: #7b7b7b;
+  font: 18px "Raleway-Regular", sans-serif; }
+
+input::-moz-placeholder {
+  color: black;
+  color: #7b7b7b;
+  font: 18px "Raleway-Regular", sans-serif; }
+
+input:-ms-input-placeholder {
+  color: black;
+  color: #7b7b7b;
+  font: 18px "Raleway-Regular", sans-serif; }
+
+textarea::-webkit-input-placeholder {
+  color: black;
+  color: #7b7b7b;
+  font: 18px "Raleway-Regular", sans-serif; }
+
+textarea:-moz-placeholder {
+  color: black;
+  color: #7b7b7b;
+  font: 18px "Raleway-Regular", sans-serif; }
+
+textarea::-moz-placeholder {
+  color: black;
+  color: #7b7b7b;
+  font: 18px "Raleway-Regular", sans-serif; }
+
+textarea:-ms-input-placeholder {
+  color: black;
+  color: #7b7b7b;
+  font: 18px "Raleway-Regular", sans-serif; }
+
+.field {
+  position: relative;
+  display: block; }
+  .field input {
+    padding: 25px 0;
+    width: 100%;
+    color: #000;
+    font: 18px/20px "Raleway-Regular", sans-serif; }
+  .field textarea {
+    padding: 25px 0;
+    width: 100%;
+    color: #000;
+    font: 18px/20px "Raleway-Regular", sans-serif; }
+
+.field:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: #f0f0f0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s; }
+
+.bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background: #dc3fa8;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s; }
+
+input:active + .bar, input:focus + .bar,
+textarea:active + .bar, textarea:focus + .bar {
+  width: 100%; }
+
+.field + .field {
+  margin-top: 7px; }
+
+.btn {
+  margin: 10px auto 0; }
+
+@media screen and (max-height: 600px) {
+  section {
+    padding-top: 0; } }
+
+@media screen and (max-width: 600px) {
+  [class*="col-"] {
+    width: 100% !important; }
+  section {
+    padding-top: 0px;
+    padding-bottom: 300px;
+    height: auto; }
+    section h1 {
+      font-size: 34px; }
+    section p {
+      font-size: 20px; }
+    section .btn {
+      width: 100%;
+      max-width: 310px; }
+  footer {
+    text-align: center; }
+    footer .politics {
+      float: none;
+      text-align: center; }
+      footer .politics a {
+        display: block; }
+      footer .politics a + a {
+        margin-left: 0; }
+    footer .footer-fire, footer .logo_rezart {
+      float: none;
+      margin: 15px 20px 10px; } }
+
+@media (min-width: 600px) and (max-width: 899px) {
+  body {
+    font-size: 15px; }
+  section {
+    padding-bottom: 300px; }
+  footer {
+    text-align: center; }
+    footer .col-9, footer .col-3 {
+      width: 100%; }
+    footer .politics {
+      float: none;
+      text-align: center; }
+      footer .politics a {
+        display: block; }
+      footer .politics a + a {
+        margin-left: 0; }
+    footer .footer-fire, footer .logo_rezart {
+      float: none;
+      margin: 15px 20px 10px; } }
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  body {
+    font-size: 16px; } }
